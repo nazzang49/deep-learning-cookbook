@@ -46,6 +46,7 @@ for image_name in tqdm(images):
     img = fetch_image(image_name)
     if img:
         valid_images.append(img)
+        # should save file names on additional list
         valid_image_names.append(image_name)
 
 print(valid_image_names)
