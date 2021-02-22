@@ -3,15 +3,7 @@
 # https://zsunn.tistory.com/entry/AI-Annoy-Approximate-Nearest-Neighbors-Oh-Yeah-%EC%84%A4%EB%AA%85-%EB%B0%8F-%EC%98%88%EC%A0%9C
 import os
 from keras.models import Model
-try:
-    from urllib import unquote
-except ImportError:
-    from urllib.parse import unquote
 from PIL import Image
-try:
-    from io import BytesIO
-except ImportError:
-    from io import StringIO as BytesIO
 import numpy as np
 from tqdm import tqdm
 from keras.applications.inception_v3 import InceptionV3, preprocess_input
@@ -22,6 +14,11 @@ from annoy import AnnoyIndex
 dir_path = "C:/cafe-img/dump/"
 images = os.listdir(dir_path)
 
+# split test
+files = os.listdir("C:/cafe-img/")
+print(files[0].split("_")[0])
+
+# length of files
 print(len(images))
 
 def center_crop_resize(img, new_size):
