@@ -1,9 +1,8 @@
-# using local image
-from sklearn.neighbors import NearestNeighbors
+# annoy from spotify
+# https://github.com/nazzang49/annoy
+# https://zsunn.tistory.com/entry/AI-Annoy-Approximate-Nearest-Neighbors-Oh-Yeah-%EC%84%A4%EB%AA%85-%EB%B0%8F-%EC%98%88%EC%A0%9C
 import os
-from sklearn.decomposition import TruncatedSVD
 from keras.models import Model
-import pickle
 try:
     from urllib import unquote
 except ImportError:
